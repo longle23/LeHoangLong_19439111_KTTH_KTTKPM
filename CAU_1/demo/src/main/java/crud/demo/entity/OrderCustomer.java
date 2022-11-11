@@ -1,4 +1,4 @@
-package tuan7crud.demo.entity;
+package crud.demo.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,25 +9,27 @@ import lombok.ToString;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
+
 @ToString
-
-public class Order {
-
+public class OrderCustomer {
 	private int orderId;
 
 	private String name;
 
 	private double price;
 
-	private int customerId;
+	private Customer customerId;
 
-	public Order(int orderId, String name, double price, int customerId) {
+	public OrderCustomer(int orderId, String name, double price, Customer customerId) {
 		super();
 		this.orderId = orderId;
 		this.name = name;
 		this.price = price;
 		this.customerId = customerId;
+	}
+
+	public OrderCustomer() {
+		super();
 	}
 
 	public int getOrderId() {
@@ -54,12 +56,14 @@ public class Order {
 		this.price = price;
 	}
 
-	public int getCustomerId() {
+	public Customer getCustomerId() {
 		return customerId;
 	}
 
-	public void setCustomerId(int customerId) {
+	public void setCustomerId(Customer customerId) {
 		this.customerId = customerId;
 	}
+	
+	
 
 }

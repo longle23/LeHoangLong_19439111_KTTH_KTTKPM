@@ -1,4 +1,4 @@
-package tuan7crud.demo.controller;
+package crud.demo.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import tuan7crud.demo.entity.Customer;
-import tuan7crud.demo.entity.Order;
-import tuan7crud.demo.entity.OrderCustomer;
+import crud.demo.entity.Customer;
+import crud.demo.entity.Order;
+import crud.demo.entity.OrderCustomer;
 
 @RestController
 @RequestMapping("/api")
