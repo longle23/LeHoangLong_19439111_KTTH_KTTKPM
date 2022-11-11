@@ -7,6 +7,7 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -52,7 +53,7 @@ public class CustomerController {
 	}
 
 	@GetMapping("/{customerId}")
-//	@Cacheable(value = "customer", key = "#customerId")
+	@Cacheable(value = "customer", key = "#customerId")
 	public Customer getCustomerById(@PathVariable int customerId) {
 		Customer Customer = customerService.getCustomerById(customerId);
 		return Customer;
